@@ -52,7 +52,7 @@ def login(api_url):
     """Authenticate via GitHub OAuth (opens browser)."""
     base = (api_url or os.getenv("INSIGHTA_API_URL", "")).rstrip("/")
     if not base:
-        base = click.prompt("Backend API URL (e.g. https://yourapp.up.railway.app)")
+        base = click.prompt("Backend API URL (e.g. https://yourapp.fly.dev)")
     base = base.rstrip("/")
 
     state, verifier, challenge = _pkce()
