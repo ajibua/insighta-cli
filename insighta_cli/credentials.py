@@ -39,4 +39,4 @@ def get_api_url() -> str:
     creds = load_credentials()
     if creds:
         return creds.get("api_url", "").rstrip("/")
-    return os.getenv("INSIGHTA_API_URL", "http://127.0.0.1:8000").rstrip("/")
+    return os.getenv("INSIGHTA_API_URL", "http://127.0.0.1:8080").rstrip("/")
